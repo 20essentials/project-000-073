@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: linear-gradient(#004,
+      #000);
+  position: fixed;
+  inset: 0;
+}
+
+.star {
+  width: var(--size);
+  height: var(--size);
+  background-color: #fff;
+  position: absolute;
+  box-shadow: var(--clon-shadow);
+  animation: risingStars var(--duration) linear infinite;
+}
+
+@keyframes risingStars {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100vh);
+  }
+}
